@@ -27,9 +27,20 @@ body {
 .site-header,
 main,
 .site-footer {
-  max-width: 38rem;
   margin: 0 auto;
+}
+
+main {
+  max-width: 38rem;
   padding: 0 1.25rem;
+}
+
+/* The header's and footer's plum rules span the text column only, so these two have no side
+   padding and are main's padding narrower instead. */
+.site-header,
+.site-footer {
+  width: calc(100% - 2.5rem);
+  max-width: 35.5rem;
 }
 
 .site-header {
@@ -65,12 +76,9 @@ main {
   padding-block: 2rem 1.5rem;
 }
 
-/* Site footer: the header's plum rule mirrored, small mono links in gold. Its rule spans
-   the text column only, so it has no side padding and is that much narrower instead. */
+/* Site footer: the header's plum rule mirrored, small mono links in gold. */
 .site-footer {
-  width: calc(100% - 2.5rem);
-  max-width: 35.5rem;
-  padding: 1.5rem 0;
+  padding-block: 1.5rem;
   border-top: 3px solid var(--rule);
   font-family: var(--mono);
   font-size: 0.78rem;
