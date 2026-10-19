@@ -4,7 +4,7 @@ date: 2013-08-03
 originalUrl: https://lbds137.blogspot.com/2013/08/running-mile-in-my-shoes.html
 tags: ["running"]
 ---
-Although running is indeed one of the few sports that require very little equipment, one still cannot do without the basic essentials of clothing, which (in most cases) include a pair of sturdy running shoes. I've already [outlined](http://lbds137.blogspot.com/2013/07/my-one-year-runniversary.html) the broad strokes of the debut of my running career, but talking solely about distances covered does not do the topic proper justice. Therefore, I will now turn to a (lengthy) discussion of the shoes that I have thus far appropriated for the purpose of taking me from point A to point A in my daily runs.
+Although running is indeed one of the few sports that require very little equipment, one still cannot do without the basic essentials of clothing, which (in most cases) include a pair of sturdy running shoes. I've already [outlined](/blog/posts/my-one-year-runniversary/) the broad strokes of the debut of my running career, but talking solely about distances covered does not do the topic proper justice. Therefore, I will now turn to a (lengthy) discussion of the shoes that I have thus far appropriated for the purpose of taking me from point A to point A in my daily runs.
 
 ![The retired Court Classic](./images/running-mile-in-my-shoes/IMG_20121107_181220.jpg "The retired Court Classic")
 
