@@ -12,17 +12,29 @@ export function formatDate(date: Date): string {
   });
 }
 
-// A post's opening paragraph as plain text, cut at a word boundary: the feed's summary.
-export function excerpt(body: string, max = 300): string {
-  const first = body.trim().split(/\n\s*\n/)[0] ?? '';
-  const text = first
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
-    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-    .replace(/^[>\s]+/gm, '')
-    .replace(/[*_`]/g, '')
+// A link target, allowing one level of parentheses inside it (Wikipedia's `Foo_(bar)`).
+const TARGET = String.raw`\((?:[^()]|\([^()]*\))*\)`;
+const IMAGE = new RegExp(String.raw`!\[[^\]]*\]${TARGET}`, 'g');
+const LINK = new RegExp(String.raw`\[([^\]]*)\]${TARGET}`, 'g');
+
+function plainText(markdown: string): string {
+  return markdown
+    .replace(IMAGE, '')
+    .replace(LINK, '$1')
+    .replace(/<[^>]+>/g, '')
+    .replace(/^[>\s]*(?:#+|[-*+]|\d+\.)?\s+/gm, '')
+    // Emphasis and code markers in pairs, so `snake_case` and `2*3` keep theirs.
+    .replace(/(?<![\w*`])(\*\*|__|\*|_|`)(\S(?:.*?\S)?)\1(?![\w*`])/g, '$2')
     .replace(/\\(.)/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+// A post's first paragraph with text in it, as plain text cut at a word boundary: the
+// feed's summary.
+export function excerpt(body: string, max = 300): string {
+  const text = body.split(/\n\s*\n/).map(plainText).find((p) => p) ?? '';
   if (text.length <= max) return text;
-  return `${text.slice(0, text.lastIndexOf(' ', max)).replace(/[,;:.]$/, '')}…`;
+  const cut = text.lastIndexOf(' ', max);
+  return `${text.slice(0, cut > 0 ? cut : max).replace(/[,;:.]$/, '')}…`;
 }
