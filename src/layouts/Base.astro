@@ -6,9 +6,11 @@ import { url } from '../lib';
 interface Props {
   title?: string;
   description?: string;
+  // The 404 page: kept out of search results and given no canonical URL.
+  noindex?: boolean;
 }
 
-const { title, description = SITE_TAGLINE } = Astro.props;
+const { title, description = SITE_TAGLINE, noindex = false } = Astro.props;
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 ---
 
@@ -18,7 +20,15 @@ const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    {
+      noindex ? (
+        <meta name="robots" content="noindex" />
+      ) : (
+        <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+      )
+    }
+    <!-- No icon yet; without this the browser asks the lbds137.github.io root, another repo. -->
+    <link rel="icon" href="data:," />
     <title>{pageTitle}</title>
   </head>
   <body>
