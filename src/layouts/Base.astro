@@ -53,5 +53,17 @@ const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
     <main>
       <slot />
     </main>
+    <footer class="site-footer">
+      <ul class="footer-links" aria-label="This blog">
+        <li><a href={url('about/')}>About</a></li>
+        <li><a href={url('rss.xml')}>RSS</a></li>
+      </ul>
+      <ul class="footer-links" aria-label="Elsewhere">
+        <li><a href="https://thenighthouse.org/">The Night House</a></li>
+        <li><a href="https://github.com/lbds137">GitHub</a></li>
+      </ul>
+      {/* The end year comes from the build, so each deploy keeps it current. */}
+      <p class="copyright">© 2013–{new Date().getFullYear()} Vladlena Costescu</p>
+    </footer>
   </body>
 </html>
