@@ -1,5 +1,5 @@
 ---
-title: "Running A MIle In My Shoes"
+title: "Running A Mile In My Shoes"
 date: 2013-08-03
 originalUrl: https://lbds137.blogspot.com/2013/08/running-mile-in-my-shoes.html
 tags: ["running"]
