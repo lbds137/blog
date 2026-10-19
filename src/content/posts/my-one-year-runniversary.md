@@ -1,5 +1,6 @@
 ---
 title: "My One Year Runniversary"
+description: "From the chubby kid who ran an 11-minute mile to a year of running every day: how I got here."
 date: 2013-07-10
 originalUrl: https://lbds137.blogspot.com/2013/07/my-one-year-runniversary.html
 tags: ["running"]

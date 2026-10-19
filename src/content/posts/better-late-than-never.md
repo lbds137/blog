@@ -1,5 +1,6 @@
 ---
 title: "Better Late Than Never"
+description: "Nearly eleven months of silence, broken by the Valentine's poem I'd promised in January: an acrostic about sailing alone past the sirens."
 date: 2014-12-04
 originalUrl: https://lbds137.blogspot.com/2014/12/better-late-than-never.html
 tags: ["meta", "poetry"]

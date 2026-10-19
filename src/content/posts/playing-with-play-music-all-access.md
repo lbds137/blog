@@ -1,5 +1,6 @@
 ---
 title: "Playing With Play Music All Access"
+description: "First impressions of Google's new music subscription, from someone who had just cancelled Spotify."
 date: 2013-06-09
 originalUrl: https://lbds137.blogspot.com/2013/06/playing-with-play-music-all-access.html
 tags: ["music", "technology"]

@@ -1,5 +1,6 @@
 ---
 title: "Close Encounters Of The Canine Kind"
+description: "A wrong turn on a run in Bucharest, a pack of five stray dogs, and a stranger's car ride to safety."
 date: 2015-02-23
 originalUrl: https://lbds137.blogspot.com/2015/02/close-encounters-of-canine-kind.html
 tags: ["running"]

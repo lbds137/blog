@@ -1,5 +1,6 @@
 ---
 title: "My Musical Metamorphosis"
+description: "From a Linkin Park CD in grade school to Nightwish and Kamelot: how my taste in music turned to metal."
 date: 2013-09-30
 originalUrl: https://lbds137.blogspot.com/2013/09/my-musical-metamorphosis.html
 tags: ["music"]

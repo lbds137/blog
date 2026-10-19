@@ -1,5 +1,6 @@
 ---
 title: "In Honor Of National Poetry Month"
+description: "Two acrostic poems, written five months apart, about consciousness, cognition and the subjective nature of perception."
 date: 2015-04-26
 originalUrl: https://lbds137.blogspot.com/2015/04/in-honor-of-national-poetry-month.html
 tags: ["poetry"]

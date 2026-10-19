@@ -1,5 +1,6 @@
 ---
 title: "A Foray Into Mythological Poetry"
+description: "Five acrostic poems about Greek gods, written one a day, and how mythology got its hooks in me."
 date: 2013-10-31
 originalUrl: https://lbds137.blogspot.com/2013/10/a-foray-into-mythological-poetry.html
 tags: ["poetry"]

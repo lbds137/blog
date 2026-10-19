@@ -1,5 +1,6 @@
 ---
 title: "Myers-Briggs Type Indicator and Cognitive Theory"
+description: "My long comment on a post I'd commissioned about personality tests: why the MBTI is more than a horoscope, plus cognitive functions and socionics."
 date: 2015-11-01
 originalUrl: https://lbds137.blogspot.com/2015/11/myers-briggs-type-indicator-and.html
 tags: ["cognition", "mbti", "meta"]

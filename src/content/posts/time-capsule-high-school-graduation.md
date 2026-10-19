@@ -1,5 +1,6 @@
 ---
 title: "Time Capsule: High School Graduation Speech"
+description: "I found my valedictorian speech while spring cleaning, so here it is, cringe and all."
 date: 2015-05-09
 originalUrl: https://lbds137.blogspot.com/2015/05/time-capsule-high-school-graduation.html
 tags: ["time capsule"]

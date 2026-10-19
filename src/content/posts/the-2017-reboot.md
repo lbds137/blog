@@ -1,5 +1,6 @@
 ---
 title: "The 2017 Reboot"
+description: "Back after a year away, with a new look for the blog, a new name for me, and a big announcement: I'm trans."
 date: 2017-01-19
 originalUrl: https://lbds137.blogspot.com/2017/01/the-2017-reboot.html
 tags: ["meta", "transgender"]

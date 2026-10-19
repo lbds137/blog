@@ -1,5 +1,6 @@
 ---
 title: "Transgender Poetry"
+description: "My first poem in almost two years, an acrostic spelling out \"I am a transgender woman\": a hidden self emerging, and what trans people still face."
 date: 2017-01-25
 originalUrl: https://lbds137.blogspot.com/2017/01/transgender-poetry.html
 tags: ["poetry", "transgender"]

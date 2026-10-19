@@ -1,5 +1,6 @@
 ---
 title: "Tour De Leesburg: An Adventure"
+description: "A Strava challenge turned a planned two-hour ride into almost four: the W&OD trail out to Leesburg, Tex Mex, and tres leches cake."
 date: 2013-06-08
 originalUrl: https://lbds137.blogspot.com/2013/06/tour-de-leesburg-adventure.html
 tags: ["biking", "food"]

@@ -1,5 +1,6 @@
 ---
 title: "Picking This Back Up"
+description: "Eight and a half years later: what changed, the move to Sigil & Silicon, and why new posts are now written with Claude's help."
 date: 2026-10-19
 tags: ["meta", "ai"]
 ---

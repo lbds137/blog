@@ -1,5 +1,6 @@
 ---
 title: "Valentine's Day Prelude: A Trilogy"
+description: "Three poems written for someone I tried and failed to court, shared ahead of Valentine's Day."
 date: 2014-01-29
 originalUrl: https://lbds137.blogspot.com/2014/01/valentines-day-prelude-trilogy.html
 tags: ["poetry"]

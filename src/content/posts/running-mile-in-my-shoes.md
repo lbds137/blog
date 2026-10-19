@@ -1,5 +1,6 @@
 ---
 title: "Running A Mile In My Shoes"
+description: "Every pair of shoes from my first year of running, from old sneakers through Mizunos to Vibram FiveFingers and barefoot miles."
 date: 2013-08-03
 originalUrl: https://lbds137.blogspot.com/2013/08/running-mile-in-my-shoes.html
 tags: ["running"]

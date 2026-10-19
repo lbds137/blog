@@ -1,5 +1,6 @@
 ---
 title: "On Randomness: A Ramble"
+description: "Creation stories say order came from chaos; I think chaos never left. A late-night ramble on entropy, and how gods might work through randomness."
 date: 2018-04-17
 originalUrl: https://lbds137.blogspot.com/2018/04/on-randomness-ramble.html
 tags: ["lilith", "metaphysics"]
