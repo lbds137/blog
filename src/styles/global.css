@@ -146,6 +146,15 @@ a:focus-visible {
   margin: 0 0 0.75rem;
 }
 
+/* The how-it's-written line under each newer post. */
+.post-footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-style: italic;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;

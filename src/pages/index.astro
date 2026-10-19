@@ -16,8 +16,9 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
     ) : (
       <>
         <p class="archive-note">
-          These posts were written between 2013 and 2018 and first ran on Blogger. They're
-          kept here as written.
+          The posts from 2013 to 2018 first ran on Blogger and are kept here as I wrote them.
+          Newer posts are written with Claude; the <a href={url('about/')}>About page</a> explains
+          how.
         </p>
         {years.map((year) => (
           <section class="year">
