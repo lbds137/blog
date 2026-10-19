@@ -32,6 +32,9 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
                       {formatDate(post.data.date)}
                     </time>
                     <a href={url(`posts/${post.id}/`)}>{post.data.title}</a>
+                    {post.data.description && (
+                      <p class="post-description">{post.data.description}</p>
+                    )}
                   </li>
                 ))}
             </ul>
