@@ -1,9 +1,10 @@
 :root {
-  --ink: #16131d;
-  --text: #e7e2ee;
-  --muted: #9b93ab;
-  --accent: #b796f2;
-  --rule: #2c2638;
+  /* From Lila's sigil work: black ground, gold linework, plum rings. */
+  --ink: #000000;
+  --text: #ece6da;
+  --muted: #a89fae;
+  --accent: #ffd700;
+  --rule: #4a1942;
   --serif: 'EB Garamond', Garamond, Georgia, serif;
   --mono: 'IBM Plex Mono', ui-monospace, monospace;
   color-scheme: dark;
@@ -32,7 +33,7 @@ main {
 
 .site-header {
   padding-block: 2.5rem 1.75rem;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 3px solid var(--rule);
 }
 
 .site-title {
