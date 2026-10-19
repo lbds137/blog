@@ -21,7 +21,6 @@ function plainText(markdown: string): string {
   return markdown
     .replace(IMAGE, '')
     .replace(LINK, '$1')
-    .replace(/<[^>]+>/g, '')
     .replace(/^[>\s]*(?:#+|[-*+]|\d+\.)?\s+/gm, '')
     // Emphasis and code markers in pairs, so `snake_case` and `2*3` keep theirs.
     .replace(/(?<![\w*`])(\*\*|__|\*|_|`)(\S(?:.*?\S)?)\1(?![\w*`])/g, '$2')
