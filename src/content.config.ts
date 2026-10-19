@@ -6,12 +6,17 @@ import { z } from 'astro/zod';
 // original date and link back to where they first ran.
 const posts = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
-  schema: z.object({
-    title: z.string(),
-    date: z.coerce.date(),
-    originalUrl: z.url().optional(),
-    tags: z.array(z.string()).default([]),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      date: z.coerce.date(),
+      originalUrl: z.url().optional(),
+      tags: z.array(z.string()).default([]),
+      // Both optional, for link previews and search: a one-sentence summary and a preview
+      // image path relative to the post's .md file (e.g. ./images/foo.jpg).
+      description: z.string().optional(),
+      image: image().optional(),
+    }),
 });
 
 export const collections = { posts };
