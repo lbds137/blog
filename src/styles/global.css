@@ -62,12 +62,15 @@ main,
 }
 
 main {
-  padding-block: 2rem 4rem;
+  padding-block: 2rem 1.5rem;
 }
 
-/* Site footer: the header's plum rule mirrored, small mono links in gold. */
+/* Site footer: the header's plum rule mirrored, small mono links in gold. Its rule spans
+   the text column only, so it has no side padding and is that much narrower instead. */
 .site-footer {
-  padding-block: 1.5rem 3rem;
+  width: calc(100% - 2.5rem);
+  max-width: 35.5rem;
+  padding: 1.5rem 0;
   border-top: 3px solid var(--rule);
   font-family: var(--mono);
   font-size: 0.78rem;
@@ -77,10 +80,14 @@ main {
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1.25rem;
-  margin: 0 0 0.6rem;
+  margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer-links li + li::before {
+  content: '·';
+  margin: 0 0.6rem;
 }
 
 .footer-links a {
@@ -88,7 +95,7 @@ main {
 }
 
 .copyright {
-  margin: 0.9rem 0 0;
+  margin: 0.35rem 0 0;
 }
 
 h1 {
@@ -174,6 +181,12 @@ a:focus-visible {
 }
 
 /* The how-it's-written line under each newer post. */
+/* The gap above the site footer is main's padding alone, whatever ends the page. */
+main > :last-child,
+article > :last-child {
+  margin-bottom: 0;
+}
+
 .post-footer {
   margin-top: 2.5rem;
   padding-top: 1rem;
