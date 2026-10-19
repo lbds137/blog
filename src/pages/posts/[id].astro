@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { formatDate } from '../../lib';
+import { formatDate, url } from '../../lib';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -10,20 +10,18 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+// Posts moved from Blogger keep their history; newer posts carry the how-it's-written footer.
+const fromBlogger = Boolean(post.data.originalUrl);
 ---
 
 <Base title={post.data.title}>
   <article>
     <h1>{post.data.title}</h1>
     <p class="post-meta">
-      Originally published{' '}
+      {fromBlogger ? 'Originally published' : 'Published'}{' '}
       <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
       {/* Not a link: the old Blogger address now redirects back to this page. */}
-      {post.data.originalUrl && (
-        <>
-          {' '}on Blogger
-        </>
-      )}
+      {fromBlogger && ' on Blogger'}
     </p>
     {
       post.data.tags.length > 0 && (
@@ -35,5 +33,13 @@ const { Content } = await render(post);
       )
     }
     <Content />
+    {
+      !fromBlogger && (
+        <p class="post-footer">
+          Drafted with Claude from my ideas, then read, revised and approved by me.{' '}
+          <a href={url('about/')}>How posts get written here.</a>
+        </p>
+      )
+    }
   </article>
 </Base>

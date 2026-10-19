@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib';
+
+// Words from Lila (approved 2026-10-19); change them only with her OK.
+---
+
+<Base
+  title="About"
+  description="Who writes Sigil & Silicon, where the old posts came from, and how new posts get written."
+>
+  <article>
+    <h1>About</h1>
+    <p>
+      Sigil &amp; Silicon is my blog: old magic, new circuits, and whatever else strikes my
+      fancy. I'm Lila (most people offline know me as Lena), and I write about the occult and my
+      spiritual path, AI and the things I build with it, being trans, and whatever film or rabbit
+      hole has my attention at the moment.
+    </p>
+    <p>
+      The posts from 2013 to 2018 came over from Blogger, where this blog used to live as The
+      Sound Of Sweating Silicon. They're kept here as I wrote them.
+    </p>
+    <p>
+      Newer posts are written with Claude. The ideas are mine, usually worked out in long
+      conversations; Claude drafts the post in a voice we built from my own writing; I read it and
+      push back, and nothing goes up until I'm happy with it. Facts get checked and linked where I
+      can, and when a specific idea in a post came from Claude rather than from me, the post says
+      so where it comes up.
+      "<a href={url('posts/picking-this-back-up/')}>Picking This Back Up</a>" explains why I write
+      this way now.
+    </p>
+  </article>
+</Base>
