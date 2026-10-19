@@ -1,5 +1,10 @@
 ---
+import '@fontsource/eb-garamond/400.css';
+import '@fontsource/eb-garamond/400-italic.css';
+import '@fontsource/eb-garamond/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
 import '../styles/global.css';
+import Sigil from '../components/Sigil.astro';
 import { SITE_TAGLINE, SITE_TITLE } from '../site';
 import { url } from '../lib';
 
@@ -20,6 +25,7 @@ const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#16131d" />
     {
       noindex ? (
         <meta name="robots" content="noindex" />
@@ -27,13 +33,15 @@ const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
         <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
       )
     }
-    <!-- No icon yet; without this the browser asks the lbds137.github.io root, another repo. -->
-    <link rel="icon" href="data:," />
+    <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
     <title>{pageTitle}</title>
   </head>
   <body>
     <header class="site-header">
-      <a class="site-title" href={url()}>{SITE_TITLE}</a>
+      <a class="site-title" href={url()}>
+        <Sigil size={34} />
+        <span>{SITE_TITLE}</span>
+      </a>
       <p class="tagline">{SITE_TAGLINE}</p>
     </header>
     <main>

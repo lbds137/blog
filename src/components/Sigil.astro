@@ -1,0 +1,31 @@
+---
+// The site's mark: a sigil drawn in circuit traces. public/favicon.svg is the same drawing.
+interface Props {
+  size?: number;
+}
+
+const { size = 32 } = Astro.props;
+---
+
+<svg
+  class="sigil"
+  width={size}
+  height={size}
+  viewBox="0 0 32 32"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <circle cx="16" cy="16" r="13.5" />
+  <path d="M11 9.6a7 7 0 0 1 10 0" />
+  <path d="M16 6.5v19" />
+  <path d="M16 13h-4.5l-3 3" />
+  <path d="M16 19h4.5l3-3" />
+  <circle cx="16" cy="6.5" r="1.4" fill="currentColor" />
+  <circle cx="16" cy="25.5" r="1.4" fill="currentColor" />
+  <circle cx="8.5" cy="16" r="1.4" fill="currentColor" />
+  <circle cx="23.5" cy="16" r="1.4" fill="currentColor" />
+</svg>

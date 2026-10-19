@@ -6,6 +6,7 @@ import { formatDate, url } from '../lib';
 const posts = (await getCollection('posts')).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime(),
 );
+const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))];
 ---
 
 <Base>
@@ -14,18 +15,27 @@ const posts = (await getCollection('posts')).sort(
       <p class="empty">Posts are on their way.</p>
     ) : (
       <>
-      <p class="archive-note">
-        These posts were written between 2013 and 2018 and first ran on Blogger. They're kept
-        here as written.
-      </p>
-      <ul class="post-list">
-        {posts.map((post) => (
-          <li>
-            <a href={url(`posts/${post.id}/`)}>{post.data.title}</a>
-            <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
-          </li>
+        <p class="archive-note">
+          These posts were written between 2013 and 2018 and first ran on Blogger. They're
+          kept here as written.
+        </p>
+        {years.map((year) => (
+          <section class="year">
+            <h2 class="year-label">{year}</h2>
+            <ul class="post-list">
+              {posts
+                .filter((post) => post.data.date.getUTCFullYear() === year)
+                .map((post) => (
+                  <li>
+                    <time datetime={post.data.date.toISOString()}>
+                      {formatDate(post.data.date)}
+                    </time>
+                    <a href={url(`posts/${post.id}/`)}>{post.data.title}</a>
+                  </li>
+                ))}
+            </ul>
+          </section>
         ))}
-      </ul>
       </>
     )
   }
