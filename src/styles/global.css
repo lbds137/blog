@@ -1,0 +1,112 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #22201c;
+  --muted: #6b665d;
+  --link: #6b3fa0;
+  --rule: #e4e0d8;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17161a;
+    --text: #e8e5df;
+    --muted: #a09a90;
+    --link: #c4a7ec;
+    --rule: #2e2c33;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.site-header,
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  padding-block: 2rem 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-title {
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+main {
+  padding-block: 1.5rem 4rem;
+}
+
+a {
+  color: var(--link);
+}
+
+.empty,
+.post-meta,
+.post-list time {
+  color: var(--muted);
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
+  padding-block: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-meta {
+  margin-top: -0.5rem;
+  font-size: 0.95rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  font-size: 0.85rem;
+}
+
+.tags li {
+  padding: 0 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--muted);
+}

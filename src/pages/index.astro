@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { formatDate, url } from '../lib';
+
+const posts = (await getCollection('posts')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<Base>
+  {
+    posts.length === 0 ? (
+      <p class="empty">Posts are on their way.</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li>
+            <a href={url(`posts/${post.id}/`)}>{post.data.title}</a>
+            <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</Base>
