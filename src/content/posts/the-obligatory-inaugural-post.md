@@ -1,6 +1,6 @@
 ---
 title: "The Obligatory Inaugural Post"
-description: "The first post: what to expect here (music, running, biking, tech and whatever else), plus a warning about my parenthetical asides."
+description: "The first post: what to expect here (music, running, biking, tech, and whatever else), plus a warning about my parenthetical asides."
 date: 2013-06-07
 originalUrl: https://lbds137.blogspot.com/2013/06/the-obligatory-inaugural-post.html
 tags: ["meta"]
