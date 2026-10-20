@@ -22,4 +22,4 @@ The ideas are mine, usually things I've noticed or argued about or been chewing 
 
 I know some people won't like that, and I understand why. There's a lot of AI slop out there, and I don't want to add to it. Getting my ideas out matters more to me than typing every word myself, but that only works if what goes up still sounds like me and is worth reading.
 
-So expect occult stuff, AI, films and whatever else strikes my fancy. The story of how I got into AI deserves a post (or two) of its own, and that will come before anything else I write about AI. First, though, a film I can't seem to stop rewatching.
+So expect occult stuff, AI, films, and whatever else strikes my fancy. The story of how I got into AI deserves a post (or two) of its own, and that will come before anything else I write about AI. First, though, a film I can't seem to stop rewatching.
