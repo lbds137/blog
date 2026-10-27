@@ -66,4 +66,4 @@ And then there's memory, which is where it got personal for me. My memory for fa
 
 The irony landed while I was working on all of this. Early on, Claude made a list of the film's key scenes that ended with a pan down through the layers, and I went along with it. I was sure the ending panned down through layer after layer of degraded rooms, and I kept saying so, until a rewatch showed I'd misremembered: the only pan down is the one before the dinner table, and the ending is a montage of separate shots. I had done to the film exactly what the Backrooms does to everything it touches.
 
-Next time I'll get to where all of this led me, which was down: into the Abyss of Western occultism, and into Clark. After that, the place itself and Async, and then Mary.
+Next time I'll get to where all of this led me, which was down: [into the Abyss of Western occultism, and into Clark](/blog/posts/the-backrooms-part-2-the-one-thing-it-cant-do/). After that, the place itself and Async, and then Mary.
