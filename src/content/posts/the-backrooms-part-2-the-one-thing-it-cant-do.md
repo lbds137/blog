@@ -6,7 +6,7 @@ tags: ["film", "backrooms", "horror", "occult"]
 ---
 Last time, in [Part 1](/blog/posts/the-backrooms-part-1-the-degrading-fractal/), I went through everything the new *Backrooms* film set off in my head, starting the night I first saw it, from *The Stanley Parable* to the Habsburgs, and the pattern I found under all of it: a degrading fractal, a world made of copies of copies that get worse the further down you go. As before, a lot of this came out of long conversations with Claude, and where a specific idea was Claude's rather than mine, I say so where it comes up. Spoilers for the whole film again.
 
-If you haven't read that post or seen the film, Part 1 has a short summary. The main things to know are Clark, the failing furniture store owner who finds a way in under his store; Kat, his assistant manager, and her boyfriend Bobby, who go in with him; Mary, his therapist, who follows him in; the slow, hollow copies of people the film calls still lifes, and the much worse pirate copy of Clark; and Async, the research institute watching all of it. You may be wondering where a pattern like that leads. For me, it led down.
+If you haven't read that post or seen the film, Part 1 has a short summary. The main things to know are Clark, the failing furniture store owner who finds a way in under his store; Kat, his assistant manager, and her boyfriend Bobby, who go in with him; Mary, Clark's therapist, who follows him in; the slow, hollow copies of people the film calls still lifes, and the much worse pirate copy of Clark; and Async, the research institute watching all of it. You may be wondering where a pattern like that leads. For me, it led down.
 
 ## Where it led: the Abyss
 
@@ -30,7 +30,9 @@ Clark fails that test about as clearly as anyone could. Later in the film, at th
 
 Except the man isn't as empty as Clark thinks. I didn't catch it myself. Months after my first watch, someone [posted a clip on Reddit](https://www.reddit.com/r/backroomsfilm/comments/1wxqkuo/i_never_noticed_that_he_blinks/) showing that with the knife still in his neck he blinks, and his three pairs of eyes blink out of step with each other. Blinking is involuntary, so something in there is still running. Clark's proof that the copies feel nothing sits in the same shot as the evidence against it, and the film never points it out, which to me makes it one of the most horrifying details in the whole thing.
 
-Those eyes blinking out of step with each other also tie into one of my favorite threads from those conversations, though it started long before the clip. On the first night I'd already thought the research institute's name fit: something synchronous happens in step with something else, and something asynchronous is out of step, arriving whenever it arrives. On one rewatch I noticed that Clark shows up late to the therapy session where he first tells Mary about the Backrooms and blames the traffic, and it looks as if he's already slipping out of sync with the rest of the world. The blinking came up much later, and it was Claude, not me, who tied it back to the name: the thing at the table literally blinks out of sync. It isn't the strangest thing in the film that runs out of step, either, but that one can wait for Part 3.
+Those eyes blinking out of step with each other also tie into one of my favorite threads from those conversations, though it started long before the clip. On the first night I'd already thought the research institute's name fit: something synchronous happens in step with something else, and something asynchronous is out of step, arriving whenever it arrives.
+
+On one rewatch I noticed that Clark shows up late to the therapy session where he first tells Mary about the Backrooms and blames the traffic, and it looks as if he's already slipping out of sync with the rest of the world. The blinking came up much later, and it was Claude, not me, who tied it back to the name: the thing at the table literally blinks out of sync. It isn't the strangest thing in the film that runs out of step, either, but that one can wait for Part 3.
 
 ## The rewatches: Clark
 
@@ -72,5 +74,5 @@ One last thing about Clark. I think he's a more relatable character than he firs
 
 I see a little of myself in him too, not much, but some. I know what it is to reach for something to take the edge off a bad feeling. The difference is what we do with it: he hurts people before they can hurt him (that's Georgia Dow's point, and I think she's right), while I tend to withdraw and become my own problem instead of anyone else's. Neither is great, but his is a lot more dangerous to the people around him. Mary has her own version too. At a gathering at her house, she sees a mother and daughter who seem much closer than she and Nora were, slips into another room, and takes pills from an unlabeled ziplock bag in a cabinet, a foil to his drinking.
 
-That's Clark's side of it. Next time: the place itself, and Async, the research institute that found it before he did.
+That's where I'll leave Clark's side of it. Next time: [the place itself, and Async](/blog/posts/the-backrooms-part-3-every-place-that-ever-was/), the research institute that found it before he did.
 
