@@ -2,6 +2,7 @@
 // Re-run with `pnpm og-card` after changing the sigil (src/components/Sigil.astro) or the title
 // or tagline (src/site.ts): the card keeps its own copy of each. Requires "Noto Serif" to be
 // installed system-wide so sharp/librsvg can rasterize the text elements.
+import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 const root = new URL('../', import.meta.url);
@@ -48,4 +49,4 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
 
 await sharp(Buffer.from(svg))
   .png({ compressionLevel: 9 })
-  .toFile(new URL('public/og-card.png', root).pathname);
+  .toFile(fileURLToPath(new URL('public/og-card.png', root)));
