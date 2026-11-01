@@ -26,7 +26,7 @@ const fromBlogger = Boolean(post.data.originalUrl);
 
 <Base
   title={post.data.title}
-  description={post.data.description ?? (excerpt(post.body ?? '', 160) || undefined)}
+  description={post.data.description?.trim() || excerpt(post.body ?? '', 160) || undefined}
   type="article"
   published={post.data.date}
   image={img && { src: img.src, width: 1200, height: 630, alt: post.data.title }}
