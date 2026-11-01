@@ -123,7 +123,8 @@ jobs:
   # Merges the PR once the review passed and every other check on the head commit
   # finished green. Done in-workflow rather than with GitHub's auto-merge, which
   # needs required checks, and those need GitHub Pro on private repos. A merge made
-  # with GITHUB_TOKEN triggers no push workflows on the default branch.
+  # with GITHUB_TOKEN triggers no push workflows on the default branch, so the job
+  # dispatches the deploy itself (workflow_dispatch is exempt).
   #
   # A Dependabot PR skips the review, so this job merges it on green checks alone (its action
   # pin bumps to this file included: Dependabot only rewrites `uses:` versions). It also
@@ -141,7 +142,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
-      actions: read
+      actions: write
       contents: write
       pull-requests: write
       checks: read
@@ -219,3 +220,7 @@ jobs:
           else
             echo "::warning::Could not delete $HEAD_REF (already gone, or protected); delete it by hand if it remains."
           fi
+      - name: Deploy main
+        # The merge's push to main starts nothing (see above), so without this the
+        # merged change never reaches the live site.
+        run: gh workflow run deploy.yml --repo "$REPO" --ref main
