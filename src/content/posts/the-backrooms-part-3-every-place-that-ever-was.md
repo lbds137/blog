@@ -79,5 +79,5 @@ Either way, in the YouTube series it wants more than research early on. Its vice
 
 Async's need to keep exploring is the part I recognize in myself, though, and it's part of why the film got its hooks into me. I'm not physically in the Backrooms, but for a while my brain was lodged in there. When something grabs me I have to turn it over and look at every angle, and the Backrooms is built to feed exactly that, because it's infinite and recursive and there's always more of it.
 
-That's the place, and the people watching it. Next time, the last one: Mary, and how she gets out.
+That's the place, and the people watching it. Next time, the last one: [Mary, and how she gets out](/blog/posts/the-backrooms-part-4-the-window-within/).
 
