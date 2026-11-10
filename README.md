@@ -8,4 +8,4 @@ An Astro site on GitHub Pages, served at <https://lbds137.github.io/blog/>.
 - Pushes to `main` deploy through `.github/workflows/deploy.yml` (the repo's Pages source is
   "GitHub Actions").
 
-The code is MIT-licensed (`LICENSE`).
+The code is MIT-licensed (`LICENSE`). Posts and images in `src/content/posts/` are © 2013-2026 Vladlena Costescu, all rights reserved; the MIT license does not cover them.
