@@ -37,7 +37,7 @@ In the [YouTube series](https://en.wikipedia.org/wiki/Backrooms_(web_series)) Ka
 
 ## The tape that was there first
 
-The film itself opens on Async's footage, dated June 19, 1990. Async's video operator, Naren Warne, is running through the Backrooms in a panic with his camera, separated from his team. He finds wires leading back to Async's equipment and follows them, relieved, through a gap in the wall that he blocks behind him with a heavy wheeled case. But the radio in the room beyond doesn't work, and nobody answers.
+The film itself opens on Async's footage, dated June 19, 1990. Hold on to that date. Async's video operator, Naren Warne, is running through the Backrooms in a panic with his camera, separated from his team. He finds wires leading back to Async's equipment and follows them, relieved, through a gap in the wall that he blocks behind him with a heavy wheeled case. But the radio in the room beyond doesn't work, and nobody answers.
 
 Then he hears a horrible shriek. He heads toward it, and in the film's first jump scare, a seagull smacks into a wall in a burst of feathers and drops as if it's dead, until it suddenly gets up. Looking for where it came from, he finds a patch of wet ceiling tile with feathers and leaves on the ground below it, and you can faintly hear birds in the distance. My guess is that the bird found a small way in and wandered through. The film keeps coming back to birds. Later on, Clark sees a dead bird in the Backrooms and moves on. It may be the same one, though that's unconfirmed.
 
