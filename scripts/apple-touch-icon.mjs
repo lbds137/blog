@@ -2,7 +2,7 @@
 // sigil drawing as src/components/Sigil.astro (og-card.mjs's source; not favicon.svg, whose
 // stroke weights differ). Re-run with `pnpm apple-touch-icon` after changing the sigil.
 // Unlike the SVG favicon, the background must be opaque: iOS composites transparency onto
-// onto black. Same pipeline as og-card.mjs (sharp rasterizing an inline SVG); no text, so no
+// black. Same pipeline as og-card.mjs (sharp rasterizing an inline SVG); no text, so no
 // system font is needed.
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
