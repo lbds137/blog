@@ -79,5 +79,5 @@ My first rule for it was that something bad happens when it plays. Then I though
 
 There's always another thread like that to pull. In Part 1 I called the Backrooms a degrading fractal, one that gets worse the closer you zoom in, and I've kept zooming in anyway. I said then that I'd watched it somewhere around eight times. I still can't tell you the real number, which is about the most Backrooms thing my memory could do. I'm aware of how that sounds.
 
-That's the film I couldn't stop rewatching. Next up is the story of how I got into AI, which I [promised back when I picked this blog up again](/blog/posts/picking-this-back-up/).
+That's the film I couldn't stop rewatching.
 
