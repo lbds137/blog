@@ -1,3 +1,6 @@
+# Inert: crawlers read robots.txt only at the host root, which the lbds137.github.io repo
+# owns (a different repo). Kept so the intent stays explicit; see CLAUDE.md. Sitemap
+# discovery runs through Search Console.
 User-agent: *
 Allow: /
 
