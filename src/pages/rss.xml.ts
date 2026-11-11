@@ -21,7 +21,7 @@ export async function GET(context: APIContext) {
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,
-      description: excerpt(post.body ?? ''),
+      description: post.data.description?.trim() || excerpt(post.body ?? ''),
       link: url(`posts/${post.id}/`),
       categories: post.data.tags,
     })),

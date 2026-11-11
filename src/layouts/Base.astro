@@ -77,6 +77,8 @@ const imageUrl = new URL(image.src, Astro.site);
       href={new URL(url('rss.xml'), Astro.site)}
     />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+    {/* iOS home-screen icon: SVG favicons don't reach it, and it needs a square PNG. */}
+    <link rel="apple-touch-icon" href={url('apple-touch-icon.png')} />
     <title>{pageTitle}</title>
   </head>
   <body>

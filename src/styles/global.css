@@ -113,6 +113,20 @@ h1 {
   line-height: 1.15;
 }
 
+/* Screen-reader-only: the index's h1 ("Posts") orders the page for assistive tech but has
+   no visual slot, since the year labels carry the visible hierarchy. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 a {
   color: var(--accent);
   text-decoration-thickness: 1px;

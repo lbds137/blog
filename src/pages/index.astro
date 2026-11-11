@@ -10,6 +10,8 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
 ---
 
 <Base>
+  {/* The page's only h1: the visible hierarchy starts at the year labels (h2). */}
+  <h1 class="sr-only">Posts</h1>
   {
     posts.length === 0 ? (
       <p class="empty">Posts are on their way.</p>
