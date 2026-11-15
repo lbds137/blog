@@ -37,6 +37,9 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
-    ]
+    ],
+    "overrides": {
+      "fflate": "^0.7.5"
+    }
   }
 }
