@@ -2,7 +2,8 @@
 import { getImage } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { excerpt, formatDate, url } from '../../lib';
+import { formatDate, postDescription, url } from '../../lib';
+import { SITE_TITLE } from '../../site';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -20,16 +21,24 @@ const img = post.data.image
       format: 'jpg',
     })
   : undefined;
+// Without a front-matter image, the preview is the post's generated card (src/pages/og/).
 // Posts moved from Blogger keep their history; newer posts carry the how-it's-written footer.
 const fromBlogger = Boolean(post.data.originalUrl);
 ---
 
 <Base
   title={post.data.title}
-  description={post.data.description?.trim() || excerpt(post.body ?? '', 160) || undefined}
+  description={postDescription(post)}
   type="article"
   published={post.data.date}
-  image={img && { src: img.src, width: 1200, height: 630, alt: post.data.title }}
+  image={img
+    ? { src: img.src, width: 1200, height: 630, alt: post.data.title }
+    : {
+        src: url(`og/${post.id}.png`),
+        width: 1200,
+        height: 630,
+        alt: `${post.data.title}: the post's title and summary on a ${SITE_TITLE} card`,
+      }}
 >
   <article>
     <h1>{post.data.title}</h1>

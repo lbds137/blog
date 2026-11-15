@@ -37,3 +37,12 @@ export function excerpt(body: string, max = 300): string {
   const cut = text.lastIndexOf(' ', max);
   return `${text.slice(0, cut > 0 ? cut : max).replace(/[,;:.]$/, '')}…`;
 }
+
+// A post's summary for link previews and its Open Graph card: the front-matter description, else
+// the opening excerpt. One function, so the meta tags and the card can't disagree.
+export function postDescription(post: {
+  data: { description?: string };
+  body?: string;
+}): string | undefined {
+  return post.data.description?.trim() || excerpt(post.body ?? '', 160) || undefined;
+}
