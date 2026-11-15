@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && vitest run && astro build",
+    "build": "astro check && pnpm test && astro build",
     "preview": "astro preview",
     "apple-touch-icon": "node scripts/apple-touch-icon.mjs",
     "og-card": "node scripts/og-card.mjs",

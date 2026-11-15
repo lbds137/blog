@@ -33,7 +33,7 @@ function plainText(markdown: string): string {
 }
 
 // A post's first paragraph with text in it, as plain text cut at a word boundary.
-export function excerpt(body: string, max = 300): string {
+export function excerpt(body: string, max: number): string {
   const text = body.split(/\n\s*\n/).map(plainText).find((p) => p) ?? '';
   if (text.length <= max) return text;
   const cut = text.lastIndexOf(' ', max);
