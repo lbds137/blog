@@ -32,8 +32,7 @@ function plainText(markdown: string): string {
     .trim();
 }
 
-// A post's first paragraph with text in it, as plain text cut at a word boundary: the
-// feed's summary.
+// A post's first paragraph with text in it, as plain text cut at a word boundary.
 export function excerpt(body: string, max = 300): string {
   const text = body.split(/\n\s*\n/).map(plainText).find((p) => p) ?? '';
   if (text.length <= max) return text;
@@ -49,7 +48,8 @@ export function smartQuotes(text: string): string {
 }
 
 // A post's summary for link previews, its Open Graph card and the feed: the front-matter
-// description, else the opening excerpt (cut at `max`). One function, so they can't disagree.
+// description, else the opening excerpt (cut at `max`). One function, so they share the source
+// and the curling; only the excerpt's length differs (the feed passes 300).
 export function postDescription(
   post: { data: { description?: string }; body?: string },
   max = 160,
