@@ -11,8 +11,9 @@ Astro static site, deployed to GitHub Pages as a **project site** at lbds137.git
   Search Console (or a root-repo line), not this file.
 - Posts live in `src/content/posts/*.md` (schema in `src/content.config.ts`). Every post gets a
   deadname pass before it is committed: the repo is public.
-- Node 24, pnpm 10 (`packageManager` pin). `pnpm build` = `astro check && vitest run && astro build`
-  (withastro/action runs it in CI); tests sit next to the code (`src/lib.test.ts`).
+- Node 24, pnpm 10 (`packageManager` pin). `pnpm build` = `astro check && pnpm test && astro build`
+  (withastro/action runs it in CI); `pnpm test` = `vitest run`, tests next to the code
+  (`src/lib.test.ts`).
 - The `@emnapi/runtime` ^1.11.3 devDependency only pins `@astrojs/check`'s optional peer: left to
   pnpm it resolves to 2.0.0-beta.2, which crashes on import, and `astro check` then misreports
   "@astrojs/check and typescript are required". Drop it once `pnpm why @emnapi/runtime` without
