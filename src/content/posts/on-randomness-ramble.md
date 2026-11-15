@@ -23,7 +23,7 @@ I wrote a rambling essay last night about randomness. The tl;dr is that I think 
 >
 >
 >
-> I'm not saying my mom was or is a bad person, because she isn't. She has a good heart that has been tainted with a laundry list of suffering throughout her life that has made her the way she is. The key thing though, is that that *she survived*. I'd say it's not a stretch to compare her life trajectory to that of Lilith fleeing from the Garden of Eden - she fled a "comfortable" living in pursuit of freedom from an intolerable home life.
+> I'm not saying my mom was or is a bad person, because she isn't. She has a good heart that has been tainted with a laundry list of suffering throughout her life that has made her the way she is. The key thing though, is that *she survived*. I'd say it's not a stretch to compare her life trajectory to that of Lilith fleeing from the Garden of Eden - she fled a "comfortable" living in pursuit of freedom from an intolerable home life.
 >
 >
 >
