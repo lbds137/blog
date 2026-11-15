@@ -16,4 +16,10 @@ Astro static site, deployed to GitHub Pages as a **project site** at lbds137.git
   pnpm it resolves to 2.0.0-beta.2, which crashes on import, and `astro check` then misreports
   "@astrojs/check and typescript are required". Drop it once `pnpm why @emnapi/runtime` without
   it shows no 2.x under `@astrojs/check`.
+- The `retext` and `retext-smartypants` pins (`smartQuotes` in `src/lib.ts`, for front-matter
+  text) track the versions Astro's Markdown uses via `remark-smartypants`, so card and meta text
+  curl like the post body. On an Astro bump, check `pnpm why retext-smartypants` shows one version.
+- Each post's Open Graph card is `og/<id>.png` (`src/pages/og/[id].png.ts`), a stable URL, so
+  Facebook keeps its cached copy: after editing a post's title or description, re-scrape the post
+  in Facebook's Sharing Debugger (developers.facebook.com/tools/debug).
 - The shell's setup mirrors ~/Projects/the-night-house (deploy.yml, CodeQL, Dependabot).

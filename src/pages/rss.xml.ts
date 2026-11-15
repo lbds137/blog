@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import type { APIContext } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE_TAGLINE, SITE_TITLE } from '../site';
-import { excerpt, url } from '../lib';
+import { postDescription, url } from '../lib';
 
 // The blog's RSS feed: newest first, each item a summary linking to the full post.
 export async function GET(context: APIContext) {
@@ -21,7 +21,7 @@ export async function GET(context: APIContext) {
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,
-      description: post.data.description?.trim() || excerpt(post.body ?? ''),
+      description: postDescription(post, 300),
       link: url(`posts/${post.id}/`),
       categories: post.data.tags,
     })),

@@ -48,12 +48,12 @@ export function smartQuotes(text: string): string {
   return String(smartypants.processSync(text));
 }
 
-// A post's summary for link previews and its Open Graph card: the front-matter description, else
-// the opening excerpt. One function, so the meta tags and the card can't disagree.
-export function postDescription(post: {
-  data: { description?: string };
-  body?: string;
-}): string | undefined {
-  const text = post.data.description?.trim() || excerpt(post.body ?? '', 160);
+// A post's summary for link previews, its Open Graph card and the feed: the front-matter
+// description, else the opening excerpt (cut at `max`). One function, so they can't disagree.
+export function postDescription(
+  post: { data: { description?: string }; body?: string },
+  max = 160,
+): string | undefined {
+  const text = post.data.description?.trim() || excerpt(post.body ?? '', max);
   return text ? smartQuotes(text) : undefined;
 }
