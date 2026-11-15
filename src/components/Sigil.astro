@@ -1,7 +1,9 @@
 ---
 // The site's mark: a sigil drawn in circuit traces. public/favicon.svg draws the same mark
 // with heavier strokes (2 vs this component's 1.6); the og-card and apple-touch-icon scripts
-// copy this component's 1.6.
+// and src/og.ts (the per-post cards) copy this component's 1.6. Keep them in sync: a change to
+// the drawing goes into every copy (favicon.svg too), and so does a change to the gold #ffd700
+// or plum #4a1942 (src/styles/global.css).
 interface Props {
   size?: number;
 }

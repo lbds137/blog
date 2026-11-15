@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+// Without a front-matter image, the preview is the post's generated card (src/pages/og/).
 const img = post.data.image
   ? await getImage({
       src: post.data.image,
@@ -21,7 +22,6 @@ const img = post.data.image
       format: 'jpg',
     })
   : undefined;
-// Without a front-matter image, the preview is the post's generated card (src/pages/og/).
 // Posts moved from Blogger keep their history; newer posts carry the how-it's-written footer.
 const fromBlogger = Boolean(post.data.originalUrl);
 ---
