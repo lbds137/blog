@@ -108,6 +108,14 @@ export async function renderCard(title: string, description?: string): Promise<B
     width: OG_WIDTH,
     height: OG_HEIGHT,
     fonts: await loadFonts(),
+    // Only Noto Serif's latin subset is loaded, and satori would draw any other glyph as
+    // nothing. It asks here for each run of text the fonts lack: fail the build instead, so a
+    // title in Hebrew or with an emoji gets a font added rather than a blank on the card.
+    loadAdditionalAsset: async (lang, segment) => {
+      throw new Error(
+        `OG card for "${title}": no font loaded for "${segment}" (${lang}); add one in src/og.ts`,
+      );
+    },
   });
   return sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toBuffer();
 }
