@@ -2,7 +2,7 @@
 // gets its card without a script to remember. src/og.ts draws it.
 import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { postDescription } from '../../lib';
+import { postDescription, smartQuotes } from '../../lib';
 import { renderCard } from '../../og';
 
 export const getStaticPaths = (async () => {
@@ -11,6 +11,7 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 export const GET: APIRoute<{ post: CollectionEntry<'posts'> }> = async ({ props }) => {
-  const png = await renderCard(props.post.data.title, postDescription(props.post));
+  const { post } = props;
+  const png = await renderCard(smartQuotes(post.data.title), postDescription(post));
   return new Response(new Uint8Array(png), { headers: { 'Content-Type': 'image/png' } });
 };

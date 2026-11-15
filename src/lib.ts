@@ -1,3 +1,6 @@
+import { retext } from 'retext';
+import retextSmartypants from 'retext-smartypants';
+
 // Prefixes a site-relative path with the project-site base (/blog/).
 export function url(path = ''): string {
   return `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
@@ -38,11 +41,19 @@ export function excerpt(body: string, max = 300): string {
   return `${text.slice(0, cut > 0 ? cut : max).replace(/[,;:.]$/, '')}…`;
 }
 
+// Curly quotes, dashes and ellipses for front-matter text, by the same library and defaults
+// Astro's Markdown uses (retext-smartypants), so it matches the post body.
+const smartypants = retext().use(retextSmartypants);
+export function smartQuotes(text: string): string {
+  return String(smartypants.processSync(text));
+}
+
 // A post's summary for link previews and its Open Graph card: the front-matter description, else
 // the opening excerpt. One function, so the meta tags and the card can't disagree.
 export function postDescription(post: {
   data: { description?: string };
   body?: string;
 }): string | undefined {
-  return post.data.description?.trim() || excerpt(post.body ?? '', 160) || undefined;
+  const text = post.data.description?.trim() || excerpt(post.body ?? '', 160);
+  return text ? smartQuotes(text) : undefined;
 }
