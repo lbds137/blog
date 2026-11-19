@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { formatDate, postDescription, postTitle, url } from '../lib';
+import { formatDate, frontMatterDescription, postTitle, url } from '../lib';
 
 const posts = (await getCollection('posts')).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime(),
@@ -34,9 +34,8 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
                       {formatDate(post.data.date)}
                     </time>
                     <a href={url(`posts/${post.id}/`)}>{postTitle(post)}</a>
-                    {/* Only a front-matter description; postDescription trims and curls it */}
-                    {post.data.description?.trim() && (
-                      <p class="post-description">{postDescription(post)}</p>
+                    {frontMatterDescription(post) && (
+                      <p class="post-description">{frontMatterDescription(post)}</p>
                     )}
                   </li>
                 ))}

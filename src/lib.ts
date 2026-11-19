@@ -52,6 +52,15 @@ export function postTitle(post: { data: { title: string } }): string {
   return smartQuotes(post.data.title);
 }
 
+// The post's own front-matter description, trimmed and curled; undefined when it has none (or
+// only whitespace). The index list shows just this; postDescription builds on it.
+export function frontMatterDescription(post: {
+  data: { description?: string };
+}): string | undefined {
+  const text = post.data.description?.trim();
+  return text ? smartQuotes(text) : undefined;
+}
+
 // A post's summary for link previews, its Open Graph card and the feed: the front-matter
 // description, else the opening excerpt (cut at `max`). One function, so they share the source
 // and the curling; only the excerpt's length differs (the feed passes 300).
@@ -59,6 +68,6 @@ export function postDescription(
   post: { data: { description?: string }; body?: string },
   max = 160,
 ): string | undefined {
-  const text = post.data.description?.trim() || excerpt(post.body ?? '', max);
-  return text ? smartQuotes(text) : undefined;
+  const fromBody = excerpt(post.body ?? '', max);
+  return frontMatterDescription(post) ?? (fromBody ? smartQuotes(fromBody) : undefined);
 }
