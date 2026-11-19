@@ -47,6 +47,11 @@ export function smartQuotes(text: string): string {
   return String(smartypants.processSync(text));
 }
 
+// A post's title as every page, preview, card and the feed show it: curled like the body.
+export function postTitle(post: { data: { title: string } }): string {
+  return smartQuotes(post.data.title);
+}
+
 // A post's summary for link previews, its Open Graph card and the feed: the front-matter
 // description, else the opening excerpt (cut at `max`). One function, so they share the source
 // and the curling; only the excerpt's length differs (the feed passes 300).

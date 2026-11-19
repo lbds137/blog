@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { excerpt, postDescription, smartQuotes } from './lib';
+import { excerpt, postDescription, postTitle, smartQuotes } from './lib';
 
 describe('excerpt', () => {
   it('takes the first paragraph that has text, as plain text', () => {
@@ -42,6 +42,14 @@ describe('excerpt', () => {
 describe('smartQuotes', () => {
   it('curls quotes and apostrophes', () => {
     expect(smartQuotes(`It's "here"`)).toBe('It’s “here”');
+  });
+});
+
+describe('postTitle', () => {
+  it('curls the front-matter title', () => {
+    expect(postTitle({ data: { title: "The One Thing It Can't Do" } })).toBe(
+      'The One Thing It Can’t Do',
+    );
   });
 });
 
