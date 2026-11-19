@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { excerpt, postDescription, postTitle, smartQuotes } from './lib';
+import { excerpt, frontMatterDescription, postDescription, postTitle, smartQuotes } from './lib';
 
 describe('excerpt', () => {
   it('takes the first paragraph that has text, as plain text', () => {
@@ -50,6 +50,19 @@ describe('postTitle', () => {
     expect(postTitle({ data: { title: "The One Thing It Can't Do" } })).toBe(
       'The One Thing It Can’t Do',
     );
+  });
+});
+
+describe('frontMatterDescription', () => {
+  it('trims and curls the description', () => {
+    expect(frontMatterDescription({ data: { description: `  A post's summary  ` } })).toBe(
+      'A post’s summary',
+    );
+  });
+
+  it('is undefined when missing or whitespace-only (never falls back to the body)', () => {
+    expect(frontMatterDescription({ data: {} })).toBeUndefined();
+    expect(frontMatterDescription({ data: { description: '   ' } })).toBeUndefined();
   });
 });
 
