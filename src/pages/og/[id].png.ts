@@ -12,6 +12,6 @@ export const getStaticPaths = (async () => {
 
 export const GET: APIRoute<{ post: CollectionEntry<'posts'> }> = async ({ props }) => {
   const { post } = props;
-  const png = await renderCard(postTitle(post),postDescription(post));
+  const png = await renderCard(postTitle(post), postDescription(post));
   return new Response(new Uint8Array(png), { headers: { 'Content-Type': 'image/png' } });
 };
